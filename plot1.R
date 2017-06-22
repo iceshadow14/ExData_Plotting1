@@ -16,8 +16,8 @@ data <- cbind(data, as.POSIXct(dateTime))
 names(data)[ncol(data)] <- "datetime"
 
 # plot histogram
-hist(as.numeric(data$Global_active_power), col = "red", xlab = "Global active power (kilowatts)")
+hist(as.numeric(data$Global_active_power), xlab = "Global active power (kilowatts)", col = "red")
 
 # write hist to png file
-dev.copy(png, filename="plot1.png")
+dev.copy(png, filename="plot1.png", height=480, width=480)
 dev.off ()
