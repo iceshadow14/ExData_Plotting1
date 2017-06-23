@@ -1,3 +1,6 @@
+# set Aspects of the Locale
+Sys.setlocale(category = "LC_ALL", "en_US.UTF-8")
+
 # load data
 if(!file.exists("PowerData.zip")) {
   fileURL<-"https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
