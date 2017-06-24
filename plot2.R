@@ -1,5 +1,5 @@
 # set Aspects of the Locale
-Sys.setlocale(category = "LC_ALL", "en_US.UTF-8")
+Sys.setlocale(category = "LC_ALL", locale = "English_United States.1252")
 
 # load data
 if(!file.exists("PowerData.zip")) {
