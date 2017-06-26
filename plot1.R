@@ -9,7 +9,7 @@ if(!file.exists("PowerData.zip")) {
 }
 
 # read data
-data <- read.csv("household_power_consumption.txt", sep = ";")
+data <- read.csv("household_power_consumption.txt", sep = ";", stringsAsFactors = FALSE)
 data$Date <- as.Date(data$Date, format="%d/%m/%Y")
 
 # filter data
@@ -19,7 +19,7 @@ data <- cbind(data, as.POSIXct(dateTime))
 names(data)[ncol(data)] <- "datetime"
 
 # plot histogram
-hist(as.numeric(data$Global_active_power), xlab = "Global active power (kilowatts)", col = "red")
+hist(as.numeric(data$Global_active_power), main = "Global Active Power", xlab = "Global active power (kilowatts)", col = "red")
 
 # write hist to png file
 dev.copy(png, filename="plot1.png", height=480, width=480)
