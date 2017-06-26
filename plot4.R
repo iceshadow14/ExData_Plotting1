@@ -9,7 +9,7 @@ if(!file.exists("PowerData.zip")) {
 }
 
 # read data
-data <- read.csv("household_power_consumption.txt", sep = ";")
+data <- read.csv("household_power_consumption.txt", sep = ";", stringsAsFactors = FALSE)
 data$Date <- as.Date(data$Date, format="%d/%m/%Y")
 
 # filter data
